@@ -3,6 +3,8 @@ let panicolig = true
 
 let som = new Audio("sound/alarme.mp3")
 
+let stream;
+let track;
 
 
 const botao = document.getElementById('button');
@@ -11,7 +13,7 @@ botao.addEventListener('mousedown', (event) => {
    event.preventDefault()
    if (panicolig === true && panicodesc === false){
        botao.src = "img/panico ligado.png"
-       som.play("sound/alarme.mp3")
+       som.play()
    }
 })
 botao.addEventListener('mouseup', (event) => {
@@ -26,14 +28,14 @@ botao.addEventListener('touchstart', (event) =>{
    event.preventDefault()
    if (panicolig === true && panicodesc === false){
        botao.src = "img/panico ligado.png"
-       ativarAlarme();
+       som.play()
    }
 })
 botao.addEventListener('touchend', (event) =>{
    event.preventDefault()
    if (panicolig === false && panicodesc === true){
        botao.src = "img/panico.png"
-       desativarAlarme();
+       som.pause()
    }
 })
 
