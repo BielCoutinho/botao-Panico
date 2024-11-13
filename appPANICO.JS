@@ -32,7 +32,7 @@ botao.addEventListener('touchstart', (event) =>{
 botao.addEventListener('touchend', (event) =>{
    event.preventDefault()
    if (panicolig === false && panicodesc === true){
-       panicodescImg.src = "img/panico.png"
+       panicoligImg.src = "img/panico.png"
        som.pause()
    }
 })
