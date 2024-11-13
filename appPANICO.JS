@@ -26,12 +26,15 @@ botao.addEventListener('touchstart', (event) =>{
    event.preventDefault()
    if (panicolig === true && panicodesc === false){
        botao.src = "img/panico ligado.png"
-       som.play("sound/alarme.mp3")
+       som.play()
    }
 })
-botao.addEventListener("touchend", (event) => { // Evento para final de toque no botão de alerta
-    event.preventDefault() // Evita o comportamento padrão do evento
-    if (alertaAtivo) desativarAlerta() // Desativa o alerta se ele estiver ativo
+botao.addEventListener('touchend', (event) =>{
+   event.preventDefault()
+   if (panicolig === false && panicodesc === true){
+       botao.src = "img/panico.png"
+       som.pause()
+   }
 })
 
 // Lanterna (torch)
