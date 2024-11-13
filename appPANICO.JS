@@ -26,14 +26,14 @@ botao.addEventListener('touchstart', (event) =>{
    event.preventDefault()
    if (panicolig === true && panicodesc === false){
        botao.src = "img/panico ligado.png"
-       som.play()
+       ativarAlarme();
    }
 })
 botao.addEventListener('touchend', (event) =>{
    event.preventDefault()
    if (panicolig === false && panicodesc === true){
        botao.src = "img/panico.png"
-       som.pause()
+       desativarAlarme();
    }
 })
 
