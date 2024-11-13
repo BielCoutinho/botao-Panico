@@ -13,7 +13,7 @@ botao.addEventListener('mousedown', (event) => {
    event.preventDefault()
    if (panicolig === true && panicodesc === false){
        botao.src = "img/panico ligado.png"
-       som.play()
+       som.play("sound/alarme.mp3")
    }
 })
 botao.addEventListener('mouseup', (event) => {
