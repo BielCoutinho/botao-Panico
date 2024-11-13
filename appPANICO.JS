@@ -11,17 +11,17 @@ const botao = document.getElementById('button');
 const panicoligImg = document.getElementById('on');
 botao.addEventListener('mousedown', (event) => {
    event.preventDefault()
-   if (panicolig === true && panicodesc === false){
+   
        botao.src = "img/panico ligado.png"
        som.play("sound/alarme.mp3")
-   }
+   
 })
 botao.addEventListener('mouseup', (event) => {
    event.preventDefault()
-   if (panicolig === true && panicodesc === false){
+   
        botao.src = "img/panico.png"
        som.pause()
-   }
+   
 })
 
 botao.addEventListener('touchstart', (event) =>{
